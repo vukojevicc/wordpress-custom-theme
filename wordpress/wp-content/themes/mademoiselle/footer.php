@@ -12,20 +12,6 @@
         </footer>
 
 
-
-
-
-
-        <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
-        <!--font awesome icons-->
-        <script src="https://kit.fontawesome.com/85bd05dd45.js"></script>
-        
-        <!--owl carousel -->
-        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-        <!-- Custom JS-->
-        <script src="js/main.js" type="text/javascript"></script>
         <?php
             // Ucitavanje neophodnih js fajlova za funkcionisanje wp-a
             wp_footer();

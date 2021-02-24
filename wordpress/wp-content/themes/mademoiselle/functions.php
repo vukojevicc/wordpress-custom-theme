@@ -12,5 +12,6 @@ function mademoiselle_scripts(){
     wp_enqueue_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.bundle.min.js', array(), '4.3.1', true);
     wp_enqueue_script( 'font awesome', 'https://kit.fontawesome.com/85bd05dd45.js', array(), '1.5', true);
     wp_enqueue_script( 'owl carousel script', get_template_directory_uri().'/frontend/js/owl.carousel.min.js', array(), '2.3.4', true);
+    wp_enqueue_script( 'main', get_template_directory_uri().'/frontend/js/main.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'mademoiselle_scripts');
