@@ -1,0 +1,30 @@
+.lead-section{
+
+    background-size: cover;
+    background-position: center;
+    .container{
+        min-height: calc(100vh - 50px);
+    }
+    
+    .lead-section-title{
+        font-size: 4rem;
+        letter-spacing: 3px;
+        line-height: 6rem;
+        max-width: 700px;
+        font-family: $bodoni-book;
+    }
+}
+
+
+@media(min-width:992px){
+    .lead-section{
+        .container{
+            min-height: 650px;
+        }
+        .lead-section-title{
+        font-size: 6rem;
+        line-height: 8.4rem;
+        letter-spacing: 20px;
+    }
+    }
+}

@@ -1,0 +1,39 @@
+
+.page-wrapper{
+    padding: 50px 0 0;
+
+    .page-content{
+        h2{
+            font-size: 3rem;
+            line-height: 3.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        p{
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+            margin-bottom: 2rem;
+            &:first-of-type{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+@media(min-width:992px){
+    .page-wrapper{
+        padding:75px 0 0;
+        .page-content{
+            h2{
+                font-size: 4.4rem;
+                line-height: 5rem;
+                margin-bottom: 4rem;
+            }
+            p{
+                margin-bottom: 4rem;
+            }
+        }
+    } 
+}

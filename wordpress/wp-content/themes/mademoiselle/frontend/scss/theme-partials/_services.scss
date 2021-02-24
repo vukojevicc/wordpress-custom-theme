@@ -1,0 +1,86 @@
+$service-odd-bg: #F5F5F5;
+$service-even-bg: $gold;
+
+.services{
+    padding: 50px 0 0;
+    .service-item{
+        
+        background-color: $service-odd-bg;
+        &:nth-of-type(even){
+            background-color: $service-even-bg;
+        }
+        
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+        }
+        
+        .service-item-image{
+            a{
+                overflow: hidden;
+                img{
+                    transition: 0.3s linear;
+                    
+                }
+            }
+        }
+
+        .service-item-content{
+            padding: 100px 9%;
+            h3{
+                a{
+                    font-weight: 400;
+                    font-weight: 3.6rem;
+                    line-height: 4.4rem;
+                    text-transform: uppercase;
+                }
+            }
+            a.btn{
+                padding: 10px 40px;
+            }
+        }
+    }
+}
+
+
+@media(min-width:768px){
+    .services{
+        .service-item{
+            
+            &:nth-of-type(odd){
+                .service-item-image{
+                    order:2;
+                } 
+            }
+            .service-item-content{
+                padding: 0px 9%;
+                h3{
+                    a{
+                        line-height: 3.4rem;
+                    }
+                }
+            }
+        }
+
+    } 
+}
+
+
+@media(min-width:992px){
+    .services{
+        padding: 75px 0 0;
+        .service-item{
+            .service-item-content{
+                padding: 0px 9%;
+                h3{
+                    a{
+                        line-height: 4.4rem;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+

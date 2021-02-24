@@ -1,0 +1,46 @@
+
+$member-border-color: $gold;
+
+.our-team{
+    padding: 50px 0;
+    
+    .team-members-slider{
+        border:1px solid $member-border-color;
+        padding-bottom: 10px;
+        
+    }
+    
+    .team-member-title{
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+    .team-member-bio{
+        font-weight: 300;
+        line-height: 2.6rem;
+        padding: 0 10px;
+    }
+    
+}
+
+@media(min-width:768px){
+    .our-team{
+        .team-members-slider{
+            padding: 30px 15px;
+        }
+    }
+}
+
+@media(min-width:992px){
+.our-team{
+    padding: 75px 0;
+    .team-members-slider{
+            padding: 50px 30px;
+        }
+}    
+
+.owl-dots{
+    margin-top: 0; 
+}
+}

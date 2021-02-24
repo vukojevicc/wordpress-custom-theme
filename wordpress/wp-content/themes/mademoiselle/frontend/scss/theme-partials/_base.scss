@@ -1,0 +1,41 @@
+a, a:hover{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: $lato;
+    font-weight: 300;
+}
+
+main{
+    padding-top: 50px;
+}
+
+@media(min-width:992px){
+    main{
+        padding-top: 79px;
+    }
+}
+
+.section-title{
+    font-size: 3rem;
+    line-height: 4.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 4.3rem;
+    font-family: $bodoni-book;
+    &:after{
+        content: '';
+        display: block;
+        width: 75px;
+        height: 2px;
+        background: $gold;
+        margin-top: 15px;
+        
+    }
+}
+

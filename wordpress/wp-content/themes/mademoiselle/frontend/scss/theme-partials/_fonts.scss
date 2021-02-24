@@ -1,0 +1,20 @@
+
+
+// theme fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+@font-face {
+  font-family: 'Bodoni-Book';
+  src: 
+      local('Bodoni-Book'),
+      url('fonts/Bodoni-Book/Bodoni-Book.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Bodoni-Book/Bodoni-Book.woff') format('woff'),
+      url('fonts/Bodoni-Book/Bodoni-Book.ttf')  format('truetype'),
+      url('fonts/Bodoni-Book/Bodoni-Book.svg#Bodoni-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$lato : 'Lato', sans-serif;
+
+$bodoni-book:'Bodoni-Book';
