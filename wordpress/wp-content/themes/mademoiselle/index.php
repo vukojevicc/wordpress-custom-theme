@@ -1,6 +1,8 @@
 <?php
 get_header();
 ?>
-<h1>index.php</h1>
+<main>
+    
+</main>
 <?php
 get_footer();
