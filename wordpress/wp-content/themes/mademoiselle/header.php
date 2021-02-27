@@ -63,7 +63,7 @@ and open the template in the editor.
                 </button>
 
                 <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="navbar-nav ml-md-auto">
+                    <!-- <ul class="navbar-nav ml-md-auto">
                         <li class="nav-item ">
                             <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
                         </li>
@@ -76,7 +76,66 @@ and open the template in the editor.
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-                    </ul>
+                    </ul> -->
+                    <?php
+                    $menuLocation = get_nav_menu_locations();
+                    $mainMenuId = $menuLocation['main-menu'];
+
+                    $topMenuItems = wp_get_nav_menu_items($mainMenuId);
+                    // var_dump($topMenuItems);
+
+                    if ($topMenuItems) {
+                    ?>
+                        <ul class="navbar-nav ml-md-auto">
+                            <?php
+                            foreach ($topMenuItems as $topMenuItem) {
+                                $active = '';
+                                if ($topMenuItem->url == get_permalink()) {
+                                    $active = 'active';
+                                }
+                                if ($topMenuItem->menu_item_parent == 0) {
+
+                                    $topItemID = $topMenuItem->ID;
+                                    $subMenuItems = array();
+
+                                    foreach ($topMenuItems as $SubMenuItem) {
+                                        if ($SubMenuItem->menu_item_parent == $topItemID) {
+                                            $subMenuItems[] = $SubMenuItem;
+
+                                            //active class
+                                            $active_submenu = '';
+                                            if ($SubMenuItem->url == get_permalink()) {
+                                                $active_submenu = 'active';
+                                            }
+                                        }
+                                    }
+                            ?>
+                                    <li class="nav-item">
+                                        <a class="nav-link <?php echo $active ?>" href="<?php echo $topMenuItem->url ?>"><?php echo $topMenuItem->title ?></a>
+                                        <?php
+                                            if(!empty($subMenuItems)){
+                                                ?>
+                                                <ul class="sub-menu">
+                                                    <?php
+                                                        foreach($subMenuItems as $SubMenuItem){
+                                                            ?>
+                                                            <li class="nav-item"><a class='nav-link <?php echo $active_submenu ?>' href="<?php echo $SubMenuItem->url ?>"><?php echo $SubMenuItem->title ?></a></li>
+                                                            <?php
+                                                        }
+                                                    ?>
+                                                </ul>
+                                                <?php
+                                            }
+                                        ?>
+                                    </li>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </ul>
+                    <?php
+                    }
+                    ?>
                 </div>
             </nav>
         </div>

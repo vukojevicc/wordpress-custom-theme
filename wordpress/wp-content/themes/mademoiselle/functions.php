@@ -29,8 +29,8 @@ add_action('after_setup_theme', 'mademoiselle_support');
 
 function mademoiselle_menus(){
     register_nav_menus(array(
-        'main-menu'=>'Main menu',
-        'social-menu'=>'Social menu'
+        'main-menu'=>'Main Menu',
+        'social-menu'=>'Social Menu'
     ));
 }
 add_action('init', 'mademoiselle_menus');
