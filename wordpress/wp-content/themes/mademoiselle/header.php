@@ -63,26 +63,11 @@ and open the template in the editor.
                 </button>
 
                 <div class="collapse navbar-collapse" id="main-menu">
-                    <!-- <ul class="navbar-nav ml-md-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul> -->
                     <?php
                     $menuLocation = get_nav_menu_locations();
                     $mainMenuId = $menuLocation['main-menu'];
 
                     $topMenuItems = wp_get_nav_menu_items($mainMenuId);
-                    // var_dump($topMenuItems);
 
                     if ($topMenuItems) {
                     ?>
@@ -102,7 +87,6 @@ and open the template in the editor.
                                         if ($SubMenuItem->menu_item_parent == $topItemID) {
                                             $subMenuItems[] = $SubMenuItem;
 
-                                            //active class
                                             $active_submenu = '';
                                             if ($SubMenuItem->url == get_permalink()) {
                                                 $active_submenu = 'active';

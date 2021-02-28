@@ -1,20 +1,38 @@
 <footer class="text-center">
-            <div class="container">
-                <nav class="social  mb-4">
-                    <a class="fab fa-facebook-f" href="http://facebook.com" target="_blank"></a>
-                    <a class="fab fa-twitter" href="http://twitter.com" target="_blank"></a>
-                    <a class="fab fa-instagram" href="http://instagram.com" target="_blank"></a>
-                </nav>
-                <p class="copyright">
-                    Copyright &copy; 2019 <a href="index.html">Mademoiselle</a>
-                </p>
-            </div>
-        </footer>
-
-
+    <div class="container">
         <?php
-            // Ucitavanje neophodnih js fajlova za funkcionisanje wp-a
-            wp_footer();
+        $socialMenu = get_nav_menu_locations();
+        $socialMenuId = $socialMenu['social-menu'];
+
+        $socialMenuItems = wp_get_nav_menu_items($socialMenuId);
+
+        if (!empty($socialMenuItems)) {
         ?>
-    </body>
+            <nav class="social  mb-4">
+                <?php
+                foreach ($socialMenuItems as $socialMenuItem) {
+                ?>
+                    <a class="<?php foreach ($socialMenuItem->classes as $class) {
+                                    echo $class . ' ';
+                                } ?>" href="<?php echo $socialMenuItem->url ?>" target="_blank"></a>
+                <?php
+                }
+                ?>
+            </nav>
+        <?php
+        }
+        ?>
+        <p class="copyright">
+            Copyright &copy; 2019 <a href="index.html">Mademoiselle</a>
+        </p>
+    </div>
+</footer>
+
+
+<?php
+// Ucitavanje neophodnih js fajlova za funkcionisanje wp-a
+wp_footer();
+?>
+</body>
+
 </html>
