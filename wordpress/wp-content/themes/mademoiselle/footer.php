@@ -23,7 +23,7 @@
         }
         ?>
         <p class="copyright">
-            Copyright &copy; 2019 <a href="index.html">Mademoiselle</a>
+            Copyright &copy; <?php echo date('Y') ?> <a href="<?php echo home_url() ?>"><?php bloginfo('name'); ?></a>
         </p>
     </div>
 </footer>
