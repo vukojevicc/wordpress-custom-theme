@@ -7420,7 +7420,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .animation {
   position: relative;
-  opacity: 0; }
+  opacity: 1; }
 
 a, a:hover {
   text-decoration: none; }

@@ -37,7 +37,11 @@ and open the template in the editor.
     // Ucitavam defalut header od WP-a
     wp_head();
     ?>
-
+    <style>
+        <?php
+            require __DIR__ . '/frontend/css/theme.css';
+        ?>
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
