@@ -24,6 +24,7 @@ function mademoiselle_support(){
         'flex-height' => false,
         'flex-width' => false
     ));
+    add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'mademoiselle_support');
 
