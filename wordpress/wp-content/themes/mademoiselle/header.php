@@ -38,6 +38,7 @@ and open the template in the editor.
     wp_head();
     ?>
     <style>
+    /* ovako sam ucitao theme.css zato sto se pri izmeni ovog fajla ne apdejtuje odmah promena koju sam izvrsio. Veb citac registruje promenu tek nakon odradjenog vremena, a pomocu ovakvog direktnog ukljucivanja fajla, promena u stylesheetu-u je odmah izvrsena. Verovatno nije najbolje resenje ali nisam bolje mogao da nadjem. */
         <?php
             require __DIR__ . '/frontend/css/theme.css';
         ?>
