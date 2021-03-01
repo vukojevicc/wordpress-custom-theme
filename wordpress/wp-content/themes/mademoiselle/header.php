@@ -73,7 +73,7 @@ and open the template in the editor.
                     $mainMenuId = $menuLocation['main-menu'];
 
                     $topMenuItems = wp_get_nav_menu_items($mainMenuId);
-
+                    // var_dump($topMenuItems);
                     if ($topMenuItems) {
                     ?>
                         <ul class="navbar-nav ml-md-auto">
@@ -100,7 +100,7 @@ and open the template in the editor.
                                     }
                             ?>
                                     <li class="nav-item">
-                                        <a class="nav-link <?php echo $active ?>" href="<?php echo $topMenuItem->url ?>"><?php echo $topMenuItem->title ?></a>
+                                        <a class="nav-link <?php echo $active; ?>" href="<?php echo $topMenuItem->url ?>"><?php echo $topMenuItem->title ?></a>
                                         <?php
                                             if(!empty($subMenuItems)){
                                                 ?>
