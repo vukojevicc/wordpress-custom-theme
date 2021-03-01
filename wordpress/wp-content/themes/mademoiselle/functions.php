@@ -35,3 +35,33 @@ function mademoiselle_menus(){
     ));
 }
 add_action('init', 'mademoiselle_menus');
+
+function mademoiselle_create_post_type(){
+    register_post_type('our_services', array(
+        'labels'=>array(
+            'name'=>'Services',
+            'singular_name'=>'Service',
+            'plural_name'=>'Services',
+            'all_items'=>'All Services',
+            'add_new'=>'Add New Service',
+            'add_new_item'=>'Add New Service Item',
+            'new_item'=> 'New Service',
+            'edit'=>'Edit',
+            'edit_item'=>'Edit Service Item',
+            'view'=>'View Service',
+            'view_item'=>'View Service Item',
+            'featured_image'=>'Feature image for this service'
+        ),
+        'public' => true,
+        'hierarchical' => false,
+        'show_in_menu' => true,
+        'menu_icon' => 'dashicons-admin-generic',
+        'menu_position' => '17',
+        'supports' => array(
+            'title',
+            'thumbnail',
+            'editor'
+        )
+    ));
+}
+add_action('init', 'mademoiselle_create_post_type');
