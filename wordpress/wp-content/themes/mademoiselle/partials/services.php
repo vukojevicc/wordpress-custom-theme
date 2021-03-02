@@ -21,7 +21,7 @@
 
                             <div class="col-md-6 service-item-image">
                                 <figure class="mb-0">
-                                    <a href="single-service.html" class="d-block">
+                                    <a href="<?php the_permalink(); ?>" class="d-block">
                                         <img src="<?php the_post_thumbnail_url(); ?>" alt="" />
                                     </a>
                                 </figure>
@@ -29,9 +29,9 @@
                             <div class="col-md-6 service-item-content">
                                 <aside>
                                     <h3 class='mb-5 animation' data-animation="slide-left">
-                                        <a href="single-service.html" class="d-block"><?php the_title(); ?></a>
+                                        <a href="<?php the_permalink(); ?>" class="d-block"><?php the_title(); ?></a>
                                     </h3>
-                                    <a href="single-service.html" class="text-uppercase btn btn-outline-dark animation" data-animation="slide-right">learn more</a>
+                                    <a href="<?php the_permalink(); ?>" class="text-uppercase btn btn-outline-dark animation" data-animation="slide-right">learn more</a>
                                 </aside>
                             </div>
                         </div>
@@ -46,23 +46,3 @@
 
     wp_reset_postdata();
     ?>
-    <!-- <article class="service-item">
-        <div class="row align-items-center no-gutters">
-
-            <div class="col-md-6 service-item-image">
-                <figure class="mb-0">
-                    <a href="single-service.html" class="d-block">
-                        <img src="image/services/service-02.png" alt="" />
-                    </a>
-                </figure>
-            </div>
-            <div class="col-md-6 service-item-content">
-                <aside>
-                    <h3 class='mb-5 animation' data-animation="slide-left">
-                        <a href="single-service.html" class="d-block">Lip augmentation Lip filling with hyaluronum</a>
-                    </h3>
-                    <a href="single-service.html" class="text-uppercase btn btn-outline-dark animation" data-animation="slide-right">learn more</a>
-                </aside>
-            </div>
-        </div>
-    </article> -->
