@@ -1,5 +1,5 @@
 <?php
-    if(is_home() && get_option('page_for_posts')){
+    if(is_home()){
         $page_for_posts = get_option( 'page_for_posts' );
         $leadImg = get_the_post_thumbnail_url($page_for_posts, 'full');
         $leadSubtitle = get_the_title($page_for_posts);    

@@ -11,7 +11,7 @@ if ($news->have_posts()) {
 ?>
     <section class="news">
         <div class="container">
-            <h2 class="section-title text-uppercase"></h2>
+            <h2 class="section-title text-uppercase">Stay Up with the Latest Beauty Trends</h2>
             <div class="row">
                 <?php
                 while ($news->have_posts()) {

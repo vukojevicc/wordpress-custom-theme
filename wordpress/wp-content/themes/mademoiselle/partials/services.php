@@ -11,7 +11,7 @@
     ?>
         <section class="services">
             <div class="container">
-            <h2 class="section-title text-uppercase"><?php the_title(); ?></h2>
+            <h2 class="section-title text-uppercase">services</h2>
                 <?php
                 while ($services->have_posts()) {
                     $services->the_post();
