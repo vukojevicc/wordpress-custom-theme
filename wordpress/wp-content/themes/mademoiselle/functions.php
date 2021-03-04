@@ -90,3 +90,16 @@ function mademoiselle_create_post_type(){
         )));
 }
 add_action('init', 'mademoiselle_create_post_type');
+
+function mademoiselle_init_sidebar(){
+    register_sidebar(array(
+        'id' => 'sidebar_1',
+        'name' => __('Primary Sidebar'),
+        'description' => __('Sidebar for widgets'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>'
+    ));
+}
+add_action('widgets_init', 'mademoiselle_init_sidebar');

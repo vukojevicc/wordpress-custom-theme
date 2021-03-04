@@ -3,7 +3,11 @@ get_header();
 ?>
 <main>
     <?php
-    include __DIR__ . '/partials/lead-section.php';
+    if(have_posts()){
+        while(have_posts()){
+            the_post();
+        }
+    }
     ?>
 </main>
 <?php
