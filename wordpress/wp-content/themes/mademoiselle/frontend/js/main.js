@@ -1,7 +1,6 @@
 
 
 $(document).ready(function(){
-    
     //ANIMATION
     function animation() {
         let  windowHeight = $(window).height();
@@ -17,7 +16,6 @@ $(document).ready(function(){
             }
         });
     }
-
 
     $(window).scroll(function () {
         animation();

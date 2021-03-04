@@ -7417,7 +7417,10 @@ a.text-dark:hover, a.text-dark:focus {
 .zoom {
   animation: zoom 1s linear;
   animation-fill-mode: forwards; }
-
+  .row{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .animation {
   position: relative;
   opacity: 1; }
