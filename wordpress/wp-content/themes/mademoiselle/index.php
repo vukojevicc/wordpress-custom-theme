@@ -12,7 +12,7 @@ get_header();
                     <?php
                     while (have_posts()) {
                         the_post();
-                        $introText = get_field('intro_text');
+                        $introText = get_field('posts_intro_text');
                     ?>
                         <div class="col-12 col-md-4 mb-4">
                             <article class="news-item animation" data-animation="slide-top">
@@ -22,8 +22,8 @@ get_header();
                                 <div class="news-item-content">
                                     <p class="date-published"><?php echo get_the_date('d/m/Y'); ?></p>
                                     <h4 class="news-item-title">
-                                        <a href="single-blog.html">
-                                            <?php the_excerpt(); ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php echo $introText; ?>
                                         </a>
                                     </h4>
                                 </div>
