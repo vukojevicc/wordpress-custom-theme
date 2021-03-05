@@ -7417,7 +7417,7 @@ a.text-dark:hover, a.text-dark:focus {
 .zoom {
   animation: zoom 1s linear;
   animation-fill-mode: forwards; }
-  .row{
+  .team-members-slider .row{
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -7870,5 +7870,11 @@ footer {
     .widget article{
       margin-bottom: 15px;
     }
-
+    .alignment-404{
+      text-align: center;
+    }
+    .alignment-404 a{
+      text-decoration: underline;
+      color: blue;
+    }
 /*# sourceMappingURL=theme.css.map */

@@ -47,7 +47,6 @@ class latest_news extends WP_Widget
         if ($news->have_posts()) {
             while ($news->have_posts()) {
                 $news->the_post();
-                $introText = get_field('posts_intro_text');
 ?>
                 <article class="news-item animation" data-animation="slide-top">
                     <figure class="mb-0">
@@ -57,7 +56,7 @@ class latest_news extends WP_Widget
                         <p class="date-published"><?php echo get_the_date('d/m/Y'); ?></p>
                         <h4 class="news-item-title">
                             <a href="<?php the_permalink(); ?>">
-                                <?php echo $introText; ?>
+                            <?php echo substr(get_the_content(), 0, 50); ?>
                             </a>
                         </h4>
                     </div>
