@@ -103,3 +103,5 @@ function mademoiselle_init_sidebar(){
     ));
 }
 add_action('widgets_init', 'mademoiselle_init_sidebar');
+
+include __DIR__ . '/inc/widgets.php';

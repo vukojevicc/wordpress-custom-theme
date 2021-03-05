@@ -7782,7 +7782,7 @@ header .navbar-nav {
       top: 1px;
       position: absolute;
       color: transparent;
-      background: #fff url("assets/search.png") no-repeat center center;
+      /* background: #fff url("assets/search.png") no-repeat center center; */
       background-size: 20px 20px; }
 
 .widget .searchform label {
@@ -7866,5 +7866,9 @@ footer {
     line-height: 4.1rem;
     letter-spacing: -0.17px;
     font-weight: 400; }
+
+    .widget article{
+      margin-bottom: 15px;
+    }
 
 /*# sourceMappingURL=theme.css.map */
