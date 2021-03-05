@@ -45,9 +45,9 @@ get_header();
 
     <section class="contact-us-data bg-primary">
         <div class="container">
-            <p>146 Douglas Dale Suite 343</p>
-            <p><a href="tel:560-748-5959">560-748-5959</a></p>
-            <p><a href="mailto:cullen_mueller@yahoo.com">cullen_mueller@yahoo.com</a></p>
+            <?php
+                include __DIR__ . '/partials/contact-info.php';
+            ?>
         </div>
     </section>
 </main>
