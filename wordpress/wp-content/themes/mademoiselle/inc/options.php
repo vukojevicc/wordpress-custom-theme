@@ -23,7 +23,6 @@ function mademoiselle_contact_data(){
 <form method="post" action="options.php">
     <?php
         settings_fields('mademoiselle_contact_data');
-        do_settings_sections('mademoiselle_contact_data');
     ?>
     <table class="form-table">
         <tr>
