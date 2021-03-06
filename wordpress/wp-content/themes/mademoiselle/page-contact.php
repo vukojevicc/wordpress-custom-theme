@@ -6,6 +6,8 @@
 get_header();
 
 $map = get_field('contact_page_map');
+$form_title = get_field('contact_form_title');
+$form = get_field('contact_form');
 ?>
 <main>
     <section class="contact-us position-relative">
@@ -14,25 +16,13 @@ $map = get_field('contact_page_map');
                 <div class="col-lg-6 mb-4 mb-md-0">
                     <article class="contact-us-form pr-lg-4 pr-xl-0">
                         <h2 class="section-title text-uppercase">
-                            Please contact us using the form bellow
+                        <?php
+                            echo $form_title;
+                        ?>
                         </h2>
 
                         <form class="contact-form" method="post" action="">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="your-name" value="" placeholder="Name and surname*">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="your-email" value="" placeholder="Email address*">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="your-subject" value="" placeholder="Subject*">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="5" name="your-message" placeholder="Enter your message*"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-outline-dark px-5 py-3 text-uppercase" type="submit" name="contact" value="send">send message</button>
-                            </div>
+                            <?php echo $form; ?>
                         </form>
                     </article>
                 </div>
